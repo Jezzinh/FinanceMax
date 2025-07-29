@@ -374,7 +374,7 @@ export default function Quiz() {
 
                   <div className="mb-6">
                     <p className="text-center text-gray-700 mb-4">
-                      Com o <span className="font-semibold text-primary">Meu Dinheiro Organizado</span> você vai{" "}
+                      Com o <span className="font-semibold text-primary">FinanceMax Pro</span> você vai{" "}
                       <span className="font-semibold">fazer o dinheiro render o mês inteiro!</span>
                     </p>
                   </div>
