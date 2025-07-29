@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useMutation } from "@tanstack/react-query";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,8 +7,6 @@ import { ProgressBar } from "@/components/quiz/ProgressBar";
 import { QuizStep } from "@/components/quiz/QuizStep";
 import { LoadingAnimation } from "@/components/quiz/LoadingAnimation";
 import { ChartAnimation } from "@/components/quiz/ChartAnimation";
-import { apiRequest } from "@/lib/queryClient";
-import type { InsertQuizResponse } from "@shared/schema";
 
 interface QuizData {
   age?: string;
@@ -26,12 +23,7 @@ export default function Quiz() {
   const [quizData, setQuizData] = useState<QuizData>({});
   const totalSteps = 11;
 
-  const submitQuizMutation = useMutation({
-    mutationFn: async (data: InsertQuizResponse) => {
-      const response = await apiRequest("POST", "/api/quiz-responses", data);
-      return response.json();
-    },
-  });
+  // Removed quiz submission since it's only interactive
 
   const selectOption = (category: keyof QuizData, value: string) => {
     setQuizData(prev => ({ ...prev, [category]: value }));
@@ -64,19 +56,6 @@ export default function Quiz() {
   };
 
   const redirectToApp = () => {
-    if (quizData.age && quizData.income && quizData.sufficiency && 
-        quizData.situation && quizData.barrier && quizData.savings && 
-        quizData.expenses) {
-      submitQuizMutation.mutate({
-        age: quizData.age,
-        income: quizData.income,
-        sufficiency: quizData.sufficiency,
-        situation: quizData.situation,
-        barrier: quizData.barrier,
-        savings: quizData.savings,
-        expenses: quizData.expenses,
-      });
-    }
     window.location.href = 'https://financa-flex.vercel.app/';
   };
 
