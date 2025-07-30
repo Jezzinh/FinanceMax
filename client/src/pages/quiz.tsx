@@ -480,7 +480,7 @@ export default function Quiz() {
 
                   <Button 
                     onClick={nextStep}
-                    className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-4 text-lg shadow-lg animate-bounce"
+                    className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-4 px-4 text-sm md:text-lg shadow-lg animate-bounce whitespace-normal break-words leading-tight"
                   >
                     🚀 QUERO PARAR DE PERDER DINHEIRO AGORA!
                   </Button>
