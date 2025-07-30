@@ -416,7 +416,7 @@ export default function Quiz() {
                       <div className="mt-3">
                         <span className="text-xs line-through opacity-75">De R$ 84,,90</span>
                         <div className="text-3xl font-bold">POR APENAS R$ 19,90</div>
-                        <p className="text-xs mt-1">💳 Ou 12x de R$ 19,90</p>
+                        <p className="text-xs mt-1">💳 Ou 4x de R$ 5,77</p>
                       </div>
                     </div>
                   </div>
