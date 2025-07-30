@@ -27,6 +27,16 @@ export default function Quiz() {
 
   const selectOption = (category: keyof QuizData, value: string) => {
     setQuizData(prev => ({ ...prev, [category]: value }));
+    
+    // Track quiz progression with Facebook Pixel
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Lead', {
+        content_name: `Quiz Step ${currentStep}`,
+        content_category: category,
+        value: value
+      });
+    }
+    
     setTimeout(() => {
       nextStep();
     }, 300);
@@ -56,6 +66,16 @@ export default function Quiz() {
   };
 
   const redirectToApp = () => {
+    // Track conversion with Facebook Pixel
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Purchase', {
+        content_name: 'FinanceMax Pro',
+        content_category: 'Financial Course',
+        value: 19.90,
+        currency: 'BRL'
+      });
+    }
+    
     window.location.href = 'https://financa-flex.vercel.app/';
   };
 
