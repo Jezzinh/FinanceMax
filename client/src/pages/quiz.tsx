@@ -74,7 +74,6 @@ export default function Quiz() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <ProgressBar currentStep={currentStep} totalSteps={totalSteps} />
-      
       {currentStep > 1 && currentStep < 10 && (
         <div className="flex items-center p-4">
           <Button
@@ -87,7 +86,6 @@ export default function Quiz() {
           </Button>
         </div>
       )}
-
       <div className="flex-1 flex items-center justify-center p-4">
         <div className="w-full max-w-md">
           <AnimatePresence mode="wait">
@@ -416,7 +414,7 @@ export default function Quiz() {
                       <h3 className="text-2xl font-bold mb-2">FinanceMax Pro</h3>
                       <p className="text-sm opacity-90">O método que vai transformar sua vida financeira</p>
                       <div className="mt-3">
-                        <span className="text-xs line-through opacity-75">De R$ 997,00</span>
+                        <span className="text-xs line-through opacity-75">De R$ 84,,90</span>
                         <div className="text-3xl font-bold">POR APENAS R$ 197,00</div>
                         <p className="text-xs mt-1">💳 Ou 12x de R$ 19,90</p>
                       </div>
