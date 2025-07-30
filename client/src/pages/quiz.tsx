@@ -112,7 +112,7 @@ export default function Quiz() {
                       Descubra EXATAMENTE quanto dinheiro você está perdendo todo mês!
                     </p>
                     <div className="mt-2 text-xs bg-white bg-opacity-20 rounded px-2 py-1 inline-block">
-                      Valor: R$ 497,00 - HOJE GRÁTIS
+                      Valor: R$ 97,00 - HOJE GRÁTIS
                     </div>
                   </div>
 
@@ -189,7 +189,7 @@ export default function Quiz() {
                 <div>
                   <div className="bg-blue-100 border-l-4 border-blue-500 p-4 mb-6">
                     <p className="text-sm text-blue-800">
-                      <span className="font-semibold">Fato:</span> 78% das pessoas que fazem este teste descobrem que estão perdendo mais de R$ 800 por mês sem perceber!
+                      <span className="font-semibold">Fato:</span> 78% das pessoas que fazem este teste descobrem que estão perdendo dinheiro todo mês sem perceber!
                     </p>
                   </div>
 
@@ -278,7 +278,7 @@ export default function Quiz() {
                       ⚠️ ALERTA FINANCEIRO
                     </h2>
                     <p className="text-red-700 text-center text-sm">
-                      Você pode estar perdendo até R$ 15.000 por ano sem perceber!
+                      Você pode estar perdendo muito dinheiro por ano sem perceber!
                     </p>
                   </div>
                   
@@ -304,7 +304,7 @@ export default function Quiz() {
                     </p>
                     <div className="bg-yellow-50 border border-yellow-200 p-3 rounded">
                       <p className="text-yellow-800 text-sm font-medium">
-                        💡 <strong>Você sabia?</strong> Quem usa o método FinanceMax Pro consegue economizar em média R$ 1.247 por mês!
+                        💡 <strong>Você sabia?</strong> Quem usa o método FinanceMax Pro consegue ter muito mais controle sobre seu dinheiro!
                       </p>
                     </div>
                   </div>
@@ -317,7 +317,7 @@ export default function Quiz() {
                     
                     <div className="bg-green-100 border border-green-300 rounded p-3 mb-4">
                       <p className="text-green-800 text-sm">
-                        🎯 <strong>Garantia de 30 dias:</strong> Se não economizar pelo menos R$ 500 no primeiro mês, devolvemos 100% do seu dinheiro!
+                        🎯 <strong>Garantia de 30 dias:</strong> Se não ficar 100% satisfeito, devolvemos todo seu dinheiro!
                       </p>
                     </div>
                     
@@ -405,7 +405,7 @@ export default function Quiz() {
                       🎉 PARABÉNS! Você se qualificou!
                     </h2>
                     <p className="text-sm opacity-90">
-                      Com base no seu perfil, você pode economizar até R$ 2.847 por mês!
+                      Com base no seu perfil, você pode economizar muito mais todo mês!
                     </p>
                   </div>
                   
@@ -414,7 +414,7 @@ export default function Quiz() {
                       <h3 className="text-2xl font-bold mb-2">FinanceMax Pro</h3>
                       <p className="text-sm opacity-90">O método que vai transformar sua vida financeira</p>
                       <div className="mt-3">
-                        <span className="text-xs line-through opacity-75">De R$ 84,,90</span>
+                        <span className="text-xs line-through opacity-75">De R$ 84,90</span>
                         <div className="text-3xl font-bold">POR APENAS R$ 19,90</div>
                         <p className="text-xs mt-1">💳 Ou 4x de R$ 5,77</p>
                       </div>
@@ -430,10 +430,10 @@ export default function Quiz() {
 
                   <div className="space-y-3 mb-6">
                     {[
-                      { text: "Controle total das suas finanças", savings: "+R$ 500/mês" },
-                      { text: "Dinheiro sobrando até fim do mês", savings: "+R$ 800/mês" },
-                      { text: "Controle dos gastos com cartões", savings: "+R$ 600/mês" },
-                      { text: "Junte dinheiro e realize sonhos", savings: "+R$ 1.200/mês" },
+                      { text: "Controle total das suas finanças", savings: "Economia" },
+                      { text: "Dinheiro sobrando até fim do mês", savings: "Sobra" },
+                      { text: "Controle dos gastos com cartões", savings: "Controle" },
+                      { text: "Junte dinheiro e realize sonhos", savings: "Sonhos" },
                       { text: "Tranquilidade e saúde financeira", savings: "Sem preço" },
                     ].map((benefit, index) => (
                       <div key={index} className="flex items-center justify-between bg-green-50 p-3 rounded-lg">
@@ -452,7 +452,7 @@ export default function Quiz() {
 
                   <div className="bg-red-100 border border-red-300 rounded-lg p-3 mb-4">
                     <p className="text-red-800 text-sm text-center">
-                      ⏰ <strong>OFERTA LIMITADA:</strong> Preço promocional válido apenas para as próximas 2 horas!
+                      ⏰ <strong>OFERTA LIMITADA:</strong> Preço promocional por tempo limitado!
                     </p>
                   </div>
 
@@ -485,12 +485,12 @@ export default function Quiz() {
                       ⚠️ ALERTA: Com base nos seus resultados
                     </p>
                     <p className="text-red-700 text-sm mb-3">
-                      Você está desperdiçando <strong>R$ 1.847 por mês</strong> sem perceber. 
+                      Você está desperdiçando dinheiro sem perceber. 
                       Trabalha duro, mas o dinheiro "some" todo mês.
                     </p>
                     <div className="bg-yellow-100 border border-yellow-300 rounded p-3">
                       <p className="text-yellow-800 text-sm">
-                        💰 <strong>Em 1 ano você perdeu:</strong> R$ 22.164 que poderiam estar na sua conta!
+                        💰 <strong>O problema:</strong> Muito dinheiro perdido que poderia estar na sua conta!
                       </p>
                     </div>
                   </div>
@@ -502,17 +502,17 @@ export default function Quiz() {
                     </p>
                     <div className="text-center bg-green-100 rounded p-2">
                       <p className="text-green-800 font-bold">
-                        ECONOMIA PROJETADA: R$ 2.847/mês
+                        RESULTADO: Muito mais controle financeiro
                       </p>
                       <p className="text-green-600 text-xs">
-                        = R$ 34.164 por ano na sua conta!
+                        = Dinheiro sobrando todo mês!
                       </p>
                     </div>
                   </div>
 
                   <div className="bg-gradient-to-r from-orange-400 to-red-500 text-white p-3 rounded-lg mb-4 text-center animate-pulse">
                     <p className="font-bold text-sm">
-                      ⏰ ÚLTIMA CHANCE: 80% OFF expira em 1h47min
+                      ⏰ ÚLTIMA CHANCE: Oferta especial expira em breve
                     </p>
                   </div>
 
