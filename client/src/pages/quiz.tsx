@@ -553,7 +553,7 @@ export default function Quiz() {
 
               {/* Step 12 - Sales Page Integration */}
               {currentStep === 12 && (
-                <div className="w-full max-w-4xl mx-auto">
+                <div className="w-full max-w-4xl mx-auto px-4">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -561,31 +561,31 @@ export default function Quiz() {
                     className="bg-white rounded-lg shadow-lg overflow-hidden"
                   >
                     {/* Hero Section */}
-                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 text-center">
-                      <h1 className="text-3xl md:text-4xl font-bold mb-4">
+                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 md:p-8 text-center">
+                      <h1 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 leading-tight">
                         Transforme Sua Vida Financeira em 30 Dias
                       </h1>
-                      <p className="text-lg mb-6 opacity-90">
+                      <p className="text-sm md:text-lg mb-4 md:mb-6 opacity-90 px-2">
                         A planilha financeira mais completa do Brasil. Mais de 20 ferramentas integradas para você organizar, controlar e multiplicar seu dinheiro.
                       </p>
                       
                       {/* Price Display */}
-                      <div className="bg-white bg-opacity-20 rounded-lg p-6 mb-6">
-                        <div className="text-sm opacity-80 line-through mb-2">De R$ 94,90</div>
-                        <div className="text-4xl font-bold mb-2">por apenas</div>
-                        <div className="text-5xl font-bold text-yellow-300 mb-2">4x de R$ 5,77</div>
-                        <div className="text-xl">ou R$ 19,90 à vista</div>
-                        <div className="text-sm mt-2 opacity-80">Pagamento único. Sem mensalidades.</div>
+                      <div className="bg-white bg-opacity-20 rounded-lg p-4 md:p-6 mb-4 md:mb-6">
+                        <div className="text-xs md:text-sm opacity-80 line-through mb-1 md:mb-2">De R$ 94,90</div>
+                        <div className="text-2xl md:text-4xl font-bold mb-1 md:mb-2">por apenas</div>
+                        <div className="text-3xl md:text-5xl font-bold text-yellow-300 mb-1 md:mb-2">4x de R$ 5,77</div>
+                        <div className="text-lg md:text-xl">ou R$ 19,90 à vista</div>
+                        <div className="text-xs md:text-sm mt-1 md:mt-2 opacity-80">Pagamento único. Sem mensalidades.</div>
                       </div>
 
                       <Button 
                         onClick={redirectToCheckout}
-                        className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-8 text-xl rounded-full animate-pulse"
+                        className="w-full md:w-auto bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 md:py-4 px-4 md:px-8 text-lg md:text-xl rounded-full animate-pulse mb-4"
                       >
                         🚀 QUERO O FINANCEMAX COM DESCONTO
                       </Button>
                       
-                      <div className="flex items-center justify-center mt-4 space-x-4 text-sm">
+                      <div className="flex flex-col md:flex-row items-center justify-center mt-3 md:mt-4 space-y-2 md:space-y-0 md:space-x-4 text-xs md:text-sm">
                         <span>✅ 7 dias de garantia</span>
                         <span>✅ Pagamento seguro</span>
                         <span>✅ +10.000 usuários</span>
@@ -593,15 +593,15 @@ export default function Quiz() {
                     </div>
 
                     {/* Features Section */}
-                    <div className="p-8">
-                      <h2 className="text-2xl font-bold text-center mb-8 text-gray-800">
+                    <div className="p-4 md:p-8">
+                      <h2 className="text-xl md:text-2xl font-bold text-center mb-4 md:mb-8 text-gray-800">
                         Recursos Principais
                       </h2>
-                      <p className="text-center text-gray-600 mb-8">
+                      <p className="text-center text-gray-600 mb-6 md:mb-8 text-sm md:text-base px-2">
                         Cada ferramenta foi cuidadosamente desenvolvida para resolver problemas reais de organização financeira
                       </p>
 
-                      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8">
                         {[
                           {
                             title: "Calendário de Compromissos",
@@ -634,20 +634,20 @@ export default function Quiz() {
                             icon: "⚙️"
                           }
                         ].map((feature, index) => (
-                          <div key={index} className="bg-gray-50 p-6 rounded-lg">
-                            <div className="text-3xl mb-3">{feature.icon}</div>
-                            <h3 className="text-lg font-semibold mb-3 text-gray-800">{feature.title}</h3>
-                            <p className="text-gray-600 text-sm">{feature.description}</p>
+                          <div key={index} className="bg-gray-50 p-4 md:p-6 rounded-lg">
+                            <div className="text-2xl md:text-3xl mb-2 md:mb-3">{feature.icon}</div>
+                            <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3 text-gray-800">{feature.title}</h3>
+                            <p className="text-gray-600 text-xs md:text-sm leading-relaxed">{feature.description}</p>
                           </div>
                         ))}
                       </div>
 
                       {/* For Who Section */}
-                      <div className="bg-blue-50 p-8 rounded-lg mb-8">
-                        <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
+                      <div className="bg-blue-50 p-4 md:p-8 rounded-lg mb-6 md:mb-8">
+                        <h2 className="text-xl md:text-2xl font-bold text-center mb-4 md:mb-6 text-gray-800">
                           O FinanceMax Pro é para você que...
                         </h2>
-                        <div className="grid md:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                           {[
                             "Precisa organizar suas finanças de maneira simples e sem perder tempo.",
                             "Quer finalmente entender para onde seu dinheiro vai e parar de tomar susto no fim do mês.",
@@ -658,17 +658,17 @@ export default function Quiz() {
                             "Saber exatamente quando pode ou não comprar algo, parcelar ou não parcelar.",
                             "Vê o dinheiro sobrando no final do mês, com paz e tranquilidade sem deixar de fazer as coisas que gosta."
                           ].map((item, index) => (
-                            <div key={index} className="flex items-start space-x-3">
-                              <div className="text-blue-600 font-bold">✓</div>
-                              <p className="text-gray-700">{item}</p>
+                            <div key={index} className="flex items-start space-x-2 md:space-x-3">
+                              <div className="text-blue-600 font-bold text-sm md:text-base">✓</div>
+                              <p className="text-gray-700 text-sm md:text-base leading-relaxed">{item}</p>
                             </div>
                           ))}
                         </div>
 
-                        <div className="text-center mt-8">
+                        <div className="text-center mt-6 md:mt-8">
                           <Button 
                             onClick={redirectToCheckout}
-                            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 text-lg rounded-full"
+                            className="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 md:px-8 text-base md:text-lg rounded-full"
                           >
                             Transformar Minha Vida Financeira Agora
                           </Button>
@@ -676,15 +676,15 @@ export default function Quiz() {
                       </div>
 
                       {/* What's Included */}
-                      <div className="mb-8">
-                        <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
+                      <div className="mb-6 md:mb-8">
+                        <h2 className="text-xl md:text-2xl font-bold text-center mb-4 md:mb-6 text-gray-800">
                           Veja tudo que você terá acesso
                         </h2>
-                        <p className="text-center text-gray-600 mb-8">
+                        <p className="text-center text-gray-600 mb-6 md:mb-8 text-sm md:text-base px-2">
                           Uma solução completa com mais de 20 ferramentas integradas
                         </p>
 
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
                           {[
                             "Controle de despesas e receitas",
                             "Ferramenta de importação de extrato bancário e categorização automatiza",
@@ -701,42 +701,42 @@ export default function Quiz() {
                             "Controle de contas bancárias",
                             "Controle de cartões"
                           ].map((feature, index) => (
-                            <div key={index} className="flex items-center space-x-3 bg-green-50 p-3 rounded">
-                              <div className="text-green-600 font-bold">✓</div>
-                              <span className="text-gray-700">{feature}</span>
+                            <div key={index} className="flex items-start space-x-2 md:space-x-3 bg-green-50 p-3 rounded">
+                              <div className="text-green-600 font-bold text-sm md:text-base">✓</div>
+                              <span className="text-gray-700 text-sm md:text-base leading-relaxed">{feature}</span>
                             </div>
                           ))}
                         </div>
                       </div>
 
                       {/* Guarantee */}
-                      <div className="bg-green-50 border border-green-200 p-6 rounded-lg mb-8 text-center">
-                        <h3 className="text-xl font-bold text-green-800 mb-3">7 DIAS DE GARANTIA</h3>
-                        <p className="text-green-700">
+                      <div className="bg-green-50 border border-green-200 p-4 md:p-6 rounded-lg mb-6 md:mb-8 text-center">
+                        <h3 className="text-lg md:text-xl font-bold text-green-800 mb-2 md:mb-3">7 DIAS DE GARANTIA</h3>
+                        <p className="text-green-700 text-sm md:text-base leading-relaxed">
                           Após baixar o controle financeiro, você terá 7 dias para testar e se adaptar. Se dentro desse período, você sentir que não é pra você, é só me pedir que eu devolvo 100% do valor investido.
                         </p>
                       </div>
 
                       {/* Testimonial */}
-                      <div className="bg-gray-50 p-8 rounded-lg mb-8">
-                        <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
+                      <div className="bg-gray-50 p-4 md:p-8 rounded-lg mb-6 md:mb-8">
+                        <h2 className="text-xl md:text-2xl font-bold text-center mb-4 md:mb-6 text-gray-800">
                           O que nossos usuários dizem
                         </h2>
                         <div className="max-w-3xl mx-auto">
-                          <div className="flex items-center justify-center mb-4">
-                            <div className="w-16 h-16 bg-gray-300 rounded-full mr-4"></div>
-                            <div>
-                              <h4 className="font-semibold text-gray-800">Vargas</h4>
-                              <p className="text-gray-600 text-sm">Especialista em Finanças</p>
+                          <div className="flex flex-col md:flex-row items-center justify-center mb-4">
+                            <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-300 rounded-full mb-2 md:mb-0 md:mr-4"></div>
+                            <div className="text-center md:text-left">
+                              <h4 className="font-semibold text-gray-800 text-sm md:text-base">Vargas</h4>
+                              <p className="text-gray-600 text-xs md:text-sm">Especialista em Finanças</p>
                             </div>
                           </div>
-                          <blockquote className="text-gray-700 italic text-center">
+                          <blockquote className="text-gray-700 italic text-center text-sm md:text-base leading-relaxed px-2">
                             "Lá em casa, ninguém falava de educação financeira. Era tudo no susto: salário entrava, dívida aumentava. E eu cresci achando que viver no aperto era normal. Até que um dia eu cansei... Sou especialista em planilhas e automações, então desenvolvi o FinanceMax... Primeiro só pra mim. Depois pros amigos. Agora para todo mundo que almeja uma vida financeira saudável e quer conquistar os seus sonhos."
                           </blockquote>
-                          <div className="text-center mt-4">
+                          <div className="text-center mt-3 md:mt-4">
                             <div className="flex justify-center space-x-1">
                               {[1,2,3,4,5].map(star => (
-                                <span key={star} className="text-yellow-500 text-xl">⭐</span>
+                                <span key={star} className="text-yellow-500 text-lg md:text-xl">⭐</span>
                               ))}
                             </div>
                           </div>
@@ -744,35 +744,35 @@ export default function Quiz() {
                       </div>
 
                       {/* Final CTA */}
-                      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-8 rounded-lg text-center">
-                        <h2 className="text-2xl font-bold mb-4">
+                      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-4 md:p-8 rounded-lg text-center">
+                        <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
                           Pronto para Transformar Sua Vida Financeira?
                         </h2>
-                        <p className="mb-6 opacity-90">
+                        <p className="mb-4 md:mb-6 opacity-90 text-sm md:text-base px-2">
                           Junte-se a mais de 10.000 pessoas que já organizaram suas finanças com o FinanceMax Pro
                         </p>
                         
-                        <div className="bg-white bg-opacity-20 rounded-lg p-6 mb-6 inline-block">
-                          <div className="text-sm opacity-80 line-through mb-1">De R$ 94,90</div>
-                          <div className="text-3xl font-bold mb-1">4x de R$ 5,77</div>
-                          <div className="text-lg">ou R$ 19,90 à vista</div>
+                        <div className="bg-white bg-opacity-20 rounded-lg p-4 md:p-6 mb-4 md:mb-6 inline-block">
+                          <div className="text-xs md:text-sm opacity-80 line-through mb-1">De R$ 94,90</div>
+                          <div className="text-2xl md:text-3xl font-bold mb-1">4x de R$ 5,77</div>
+                          <div className="text-base md:text-lg">ou R$ 19,90 à vista</div>
                         </div>
 
-                        <div className="space-y-4">
+                        <div className="space-y-3 md:space-y-4">
                           <Button 
                             onClick={redirectToCheckout}
-                            className="w-full bg-white text-orange-600 hover:bg-gray-100 font-bold py-4 px-8 text-xl rounded-full"
+                            className="w-full bg-white text-orange-600 hover:bg-gray-100 font-bold py-3 md:py-4 px-4 md:px-8 text-lg md:text-xl rounded-full"
                           >
                             🚀 RECEBER AGORA
                           </Button>
                           
-                          <div className="flex items-center justify-center space-x-6 text-sm">
+                          <div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-6 text-xs md:text-sm">
                             <span>✅ Garantia de 7 dias</span>
                             <span>✅ Pagamento 100% seguro</span>
                             <span>✅ Acesso imediato</span>
                           </div>
                           
-                          <div className="flex items-center justify-center space-x-4 text-sm opacity-80">
+                          <div className="flex items-center justify-center space-x-3 md:space-x-4 text-xs md:text-sm opacity-80">
                             <span>💳 Visa</span>
                             <span>💳 Mastercard</span>
                             <span>📱 PIX</span>
