@@ -415,7 +415,7 @@ export default function Quiz() {
                       <p className="text-sm opacity-90">O método que vai transformar sua vida financeira</p>
                       <div className="mt-3">
                         <span className="text-xs line-through opacity-75">De R$ 84,,90</span>
-                        <div className="text-3xl font-bold">POR APENAS R$ 197,00</div>
+                        <div className="text-3xl font-bold">POR APENAS R$ 19,90</div>
                         <p className="text-xs mt-1">💳 Ou 12x de R$ 19,90</p>
                       </div>
                     </div>
