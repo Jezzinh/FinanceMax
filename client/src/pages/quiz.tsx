@@ -107,7 +107,7 @@ export default function Quiz() {
         </div>
       )}
       <div className="flex-1 flex items-center justify-center p-4">
-        <div className="w-full max-w-md">
+        <div className="w-full max-w-md px-2">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentStep}
@@ -131,11 +131,11 @@ export default function Quiz() {
                       <Button
                         key={option.value}
                         variant="outline"
-                        className="w-full p-4 h-auto text-left justify-start option-card hover:bg-blue-50 hover:border-blue-400"
+                        className="w-full p-4 h-auto text-left justify-start option-card hover:bg-blue-50 hover:border-blue-400 whitespace-normal break-words"
                         onClick={() => selectOption("situation", option.value)}
                       >
-                        <span className="text-xl md:text-2xl mr-3">{option.icon}</span>
-                        <span className="text-sm md:text-base">{option.label}</span>
+                        <span className="text-xl md:text-2xl mr-2 md:mr-3 flex-shrink-0">{option.icon}</span>
+                        <span className="text-sm md:text-base flex-1 leading-snug">{option.label}</span>
                       </Button>
                     ))}
                   </div>
@@ -164,11 +164,11 @@ export default function Quiz() {
                         <Button
                           key={option.value}
                           variant="outline"
-                          className="w-full p-4 h-auto text-left justify-start option-card"
+                          className="w-full p-4 h-auto text-left justify-start option-card whitespace-normal break-words"
                           onClick={() => selectOption("sufficiency", option.value)}
                         >
-                          <span className="text-2xl mr-3">{option.icon}</span>
-                          {option.label}
+                          <span className="text-xl md:text-2xl mr-2 md:mr-3 flex-shrink-0">{option.icon}</span>
+                          <span className="text-sm md:text-base flex-1 leading-snug">{option.label}</span>
                         </Button>
                       ))}
                     </div>
@@ -196,10 +196,10 @@ export default function Quiz() {
                       <Button
                         key={option.value}
                         variant="outline"
-                        className="w-full p-4 h-auto text-left justify-start option-card"
+                        className="w-full p-4 h-auto text-left justify-start option-card whitespace-normal break-words"
                         onClick={() => selectOption("income", option.value)}
                       >
-                        {option.label}
+                        <span className="text-sm md:text-base leading-snug">{option.label}</span>
                       </Button>
                     ))}
                   </div>
@@ -221,11 +221,11 @@ export default function Quiz() {
                       <Button
                         key={option.value}
                         variant="outline"
-                        className="w-full p-4 h-auto text-left justify-start option-card"
+                        className="w-full p-4 h-auto text-left justify-start option-card whitespace-normal break-words"
                         onClick={() => selectOption("barrier", option.value)}
                       >
-                        <span className="text-2xl mr-3">{option.icon}</span>
-                        {option.label}
+                        <span className="text-xl md:text-2xl mr-2 md:mr-3 flex-shrink-0">{option.icon}</span>
+                        <span className="text-sm md:text-base flex-1 leading-snug">{option.label}</span>
                       </Button>
                     ))}
                   </div>
@@ -285,7 +285,7 @@ export default function Quiz() {
                     
                     <Button 
                       onClick={nextStep}
-                      className="w-full bg-primary hover:bg-blue-600 text-white font-semibold py-3"
+                      className="w-full bg-primary hover:bg-blue-600 text-white font-semibold py-3 px-4 whitespace-normal break-words text-sm md:text-base leading-tight"
                     >
                       QUERO DESCOBRIR QUANTO POSSO ECONOMIZAR
                     </Button>
@@ -310,11 +310,11 @@ export default function Quiz() {
                       <Button
                         key={option.value}
                         variant="outline"
-                        className="w-full p-4 h-auto text-left justify-start option-card"
+                        className="w-full p-4 h-auto text-left justify-start option-card whitespace-normal break-words"
                         onClick={() => selectOption("savings", option.value)}
                       >
-                        <span className="text-2xl mr-3">{option.icon}</span>
-                        {option.label}
+                        <span className="text-xl md:text-2xl mr-2 md:mr-3 flex-shrink-0">{option.icon}</span>
+                        <span className="text-sm md:text-base flex-1 leading-snug">{option.label}</span>
                       </Button>
                     ))}
                   </div>
@@ -334,17 +334,17 @@ export default function Quiz() {
                     {expenseOptions.map((option) => (
                       <label
                         key={option.value}
-                        className="flex items-center p-4 bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-lg cursor-pointer transition-all duration-200"
+                        className="flex items-start p-4 bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-lg cursor-pointer transition-all duration-200"
                       >
                         <Checkbox
                           checked={quizData.expenses?.includes(option.value) || false}
                           onCheckedChange={(checked) => 
                             handleExpenseSelection(option.value, checked as boolean)
                           }
-                          className="mr-4"
+                          className="mr-3 mt-0.5 flex-shrink-0"
                         />
-                        <span className="text-2xl mr-3">{option.icon}</span>
-                        <span>{option.label}</span>
+                        <span className="text-lg md:text-xl mr-2 md:mr-3 flex-shrink-0">{option.icon}</span>
+                        <span className="text-sm md:text-base leading-snug flex-1">{option.label}</span>
                       </label>
                     ))}
                   </div>

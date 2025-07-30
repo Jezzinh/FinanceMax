@@ -63,6 +63,9 @@
 @layer components {
   .option-card {
     @apply transition-all duration-200 hover:shadow-md;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
   
   .option-card:hover {
