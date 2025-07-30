@@ -21,7 +21,7 @@ interface QuizData {
 export default function Quiz() {
   const [currentStep, setCurrentStep] = useState(1);
   const [quizData, setQuizData] = useState<QuizData>({});
-  const totalSteps = 11;
+  const totalSteps = 12;
 
   // Removed quiz submission since it's only interactive
 
@@ -65,7 +65,7 @@ export default function Quiz() {
     }
   };
 
-  const redirectToApp = () => {
+  const redirectToCheckout = () => {
     // Track conversion with Facebook Pixel
     if (typeof window !== 'undefined' && (window as any).fbq) {
       (window as any).fbq('track', 'Purchase', {
@@ -76,7 +76,7 @@ export default function Quiz() {
       });
     }
     
-    window.location.href = 'https://financa-flex.vercel.app/';
+    window.open('https://pay.cakto.com.br/d8je6i3_498803', '_blank');
   };
 
   const expenseOptions = [
@@ -537,7 +537,7 @@ export default function Quiz() {
                   </div>
 
                   <Button 
-                    onClick={redirectToApp}
+                    onClick={nextStep}
                     className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-4 text-lg shadow-lg animate-bounce"
                   >
                     🚀 QUERO PARAR DE PERDER DINHEIRO AGORA!
@@ -549,6 +549,239 @@ export default function Quiz() {
                     </p>
                   </div>
                 </QuizStep>
+              )}
+
+              {/* Step 12 - Sales Page Integration */}
+              {currentStep === 12 && (
+                <div className="w-full max-w-4xl mx-auto">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="bg-white rounded-lg shadow-lg overflow-hidden"
+                  >
+                    {/* Hero Section */}
+                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 text-center">
+                      <h1 className="text-3xl md:text-4xl font-bold mb-4">
+                        Transforme Sua Vida Financeira em 30 Dias
+                      </h1>
+                      <p className="text-lg mb-6 opacity-90">
+                        A planilha financeira mais completa do Brasil. Mais de 20 ferramentas integradas para você organizar, controlar e multiplicar seu dinheiro.
+                      </p>
+                      
+                      {/* Price Display */}
+                      <div className="bg-white bg-opacity-20 rounded-lg p-6 mb-6">
+                        <div className="text-sm opacity-80 line-through mb-2">De R$ 94,90</div>
+                        <div className="text-4xl font-bold mb-2">por apenas</div>
+                        <div className="text-5xl font-bold text-yellow-300 mb-2">4x de R$ 5,77</div>
+                        <div className="text-xl">ou R$ 19,90 à vista</div>
+                        <div className="text-sm mt-2 opacity-80">Pagamento único. Sem mensalidades.</div>
+                      </div>
+
+                      <Button 
+                        onClick={redirectToCheckout}
+                        className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-8 text-xl rounded-full animate-pulse"
+                      >
+                        🚀 QUERO O FINANCEMAX COM DESCONTO
+                      </Button>
+                      
+                      <div className="flex items-center justify-center mt-4 space-x-4 text-sm">
+                        <span>✅ 7 dias de garantia</span>
+                        <span>✅ Pagamento seguro</span>
+                        <span>✅ +10.000 usuários</span>
+                      </div>
+                    </div>
+
+                    {/* Features Section */}
+                    <div className="p-8">
+                      <h2 className="text-2xl font-bold text-center mb-8 text-gray-800">
+                        Recursos Principais
+                      </h2>
+                      <p className="text-center text-gray-600 mb-8">
+                        Cada ferramenta foi cuidadosamente desenvolvida para resolver problemas reais de organização financeira
+                      </p>
+
+                      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                        {[
+                          {
+                            title: "Calendário de Compromissos",
+                            description: "Visualize todos os seus compromissos financeiros e esteja sempre por dentro para não seja pego de surpresa.",
+                            icon: "📅"
+                          },
+                          {
+                            title: "Controle de Investimentos",
+                            description: "Construa sua reserva de emergência, para ter segurança e tranquilidade. Além da reserva você também poderá controlar os seus investimentos de renda fixa e variável.",
+                            icon: "📈"
+                          },
+                          {
+                            title: "Rastreador de Dívidas",
+                            description: "Esse rastreador fará a contabilização automática de todas as sua dívidas e você terá um acompanhamento por status.",
+                            icon: "💳"
+                          },
+                          {
+                            title: "Balanço Financeiro",
+                            description: "Acompanhe mês a mês e no ano, todas as suas entradas e saídas e saiba qual foi o saldo final de cada mês, todos os cálculos automáticos.",
+                            icon: "💰"
+                          },
+                          {
+                            title: "Controle Total",
+                            description: "Ative as notificações de contas a vencer por email para nunca mais esquecer de pagar suas contas.",
+                            icon: "🔔"
+                          },
+                          {
+                            title: "Ferramentas Avançadas",
+                            description: "Mais de 20 ferramentas especializadas incluindo controle de cartões, formulários automáticos e muito mais.",
+                            icon: "⚙️"
+                          }
+                        ].map((feature, index) => (
+                          <div key={index} className="bg-gray-50 p-6 rounded-lg">
+                            <div className="text-3xl mb-3">{feature.icon}</div>
+                            <h3 className="text-lg font-semibold mb-3 text-gray-800">{feature.title}</h3>
+                            <p className="text-gray-600 text-sm">{feature.description}</p>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* For Who Section */}
+                      <div className="bg-blue-50 p-8 rounded-lg mb-8">
+                        <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
+                          O FinanceMax Pro é para você que...
+                        </h2>
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {[
+                            "Precisa organizar suas finanças de maneira simples e sem perder tempo.",
+                            "Quer finalmente entender para onde seu dinheiro vai e parar de tomar susto no fim do mês.",
+                            "Saber primeiro que o banco para onde foi o seu dinheiro e não ser pego de surpresa.",
+                            "Está cansado de não entender o mistério do valor da fatura do cartão de crédito.",
+                            "Quer sair ou evitar o ciclo de dívidas e parar de depender do cheque especial.",
+                            "Deseja criar uma reserva financeira para ter segurança (ninguém sabe o dia de amanhã).",
+                            "Saber exatamente quando pode ou não comprar algo, parcelar ou não parcelar.",
+                            "Vê o dinheiro sobrando no final do mês, com paz e tranquilidade sem deixar de fazer as coisas que gosta."
+                          ].map((item, index) => (
+                            <div key={index} className="flex items-start space-x-3">
+                              <div className="text-blue-600 font-bold">✓</div>
+                              <p className="text-gray-700">{item}</p>
+                            </div>
+                          ))}
+                        </div>
+
+                        <div className="text-center mt-8">
+                          <Button 
+                            onClick={redirectToCheckout}
+                            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 text-lg rounded-full"
+                          >
+                            Transformar Minha Vida Financeira Agora
+                          </Button>
+                        </div>
+                      </div>
+
+                      {/* What's Included */}
+                      <div className="mb-8">
+                        <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
+                          Veja tudo que você terá acesso
+                        </h2>
+                        <p className="text-center text-gray-600 mb-8">
+                          Uma solução completa com mais de 20 ferramentas integradas
+                        </p>
+
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                          {[
+                            "Controle de despesas e receitas",
+                            "Ferramenta de importação de extrato bancário e categorização automatiza",
+                            "Controle de cartão de crédito",
+                            "Formulário de crédito automatizado",
+                            "Ferramenta de importação de fatura",
+                            "Torre de investimentos",
+                            "Rastreador de dívidas",
+                            "Calendário de compromissos",
+                            "Dashboard com visão geral",
+                            "Balanço financeiro",
+                            "Robô de notificações de contas",
+                            "Planejador de orçamento mensal",
+                            "Controle de contas bancárias",
+                            "Controle de cartões"
+                          ].map((feature, index) => (
+                            <div key={index} className="flex items-center space-x-3 bg-green-50 p-3 rounded">
+                              <div className="text-green-600 font-bold">✓</div>
+                              <span className="text-gray-700">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Guarantee */}
+                      <div className="bg-green-50 border border-green-200 p-6 rounded-lg mb-8 text-center">
+                        <h3 className="text-xl font-bold text-green-800 mb-3">7 DIAS DE GARANTIA</h3>
+                        <p className="text-green-700">
+                          Após baixar o controle financeiro, você terá 7 dias para testar e se adaptar. Se dentro desse período, você sentir que não é pra você, é só me pedir que eu devolvo 100% do valor investido.
+                        </p>
+                      </div>
+
+                      {/* Testimonial */}
+                      <div className="bg-gray-50 p-8 rounded-lg mb-8">
+                        <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
+                          O que nossos usuários dizem
+                        </h2>
+                        <div className="max-w-3xl mx-auto">
+                          <div className="flex items-center justify-center mb-4">
+                            <div className="w-16 h-16 bg-gray-300 rounded-full mr-4"></div>
+                            <div>
+                              <h4 className="font-semibold text-gray-800">Vargas</h4>
+                              <p className="text-gray-600 text-sm">Especialista em Finanças</p>
+                            </div>
+                          </div>
+                          <blockquote className="text-gray-700 italic text-center">
+                            "Lá em casa, ninguém falava de educação financeira. Era tudo no susto: salário entrava, dívida aumentava. E eu cresci achando que viver no aperto era normal. Até que um dia eu cansei... Sou especialista em planilhas e automações, então desenvolvi o FinanceMax... Primeiro só pra mim. Depois pros amigos. Agora para todo mundo que almeja uma vida financeira saudável e quer conquistar os seus sonhos."
+                          </blockquote>
+                          <div className="text-center mt-4">
+                            <div className="flex justify-center space-x-1">
+                              {[1,2,3,4,5].map(star => (
+                                <span key={star} className="text-yellow-500 text-xl">⭐</span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Final CTA */}
+                      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-8 rounded-lg text-center">
+                        <h2 className="text-2xl font-bold mb-4">
+                          Pronto para Transformar Sua Vida Financeira?
+                        </h2>
+                        <p className="mb-6 opacity-90">
+                          Junte-se a mais de 10.000 pessoas que já organizaram suas finanças com o FinanceMax Pro
+                        </p>
+                        
+                        <div className="bg-white bg-opacity-20 rounded-lg p-6 mb-6 inline-block">
+                          <div className="text-sm opacity-80 line-through mb-1">De R$ 94,90</div>
+                          <div className="text-3xl font-bold mb-1">4x de R$ 5,77</div>
+                          <div className="text-lg">ou R$ 19,90 à vista</div>
+                        </div>
+
+                        <div className="space-y-4">
+                          <Button 
+                            onClick={redirectToCheckout}
+                            className="w-full bg-white text-orange-600 hover:bg-gray-100 font-bold py-4 px-8 text-xl rounded-full"
+                          >
+                            🚀 RECEBER AGORA
+                          </Button>
+                          
+                          <div className="flex items-center justify-center space-x-6 text-sm">
+                            <span>✅ Garantia de 7 dias</span>
+                            <span>✅ Pagamento 100% seguro</span>
+                            <span>✅ Acesso imediato</span>
+                          </div>
+                          
+                          <div className="flex items-center justify-center space-x-4 text-sm opacity-80">
+                            <span>💳 Visa</span>
+                            <span>💳 Mastercard</span>
+                            <span>📱 PIX</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
               )}
             </motion.div>
           </AnimatePresence>
