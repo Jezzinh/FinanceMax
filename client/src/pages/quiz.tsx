@@ -21,7 +21,7 @@ interface QuizData {
 export default function Quiz() {
   const [currentStep, setCurrentStep] = useState(1);
   const [quizData, setQuizData] = useState<QuizData>({});
-  const totalSteps = 12;
+  const totalSteps = 11;
 
   // Removed quiz submission since it's only interactive
 
@@ -94,7 +94,7 @@ export default function Quiz() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <ProgressBar currentStep={currentStep} totalSteps={totalSteps} />
-      {currentStep > 1 && currentStep < 10 && (
+      {currentStep > 1 && currentStep < 9 && (
         <div className="flex items-center p-4">
           <Button
             variant="ghost"
@@ -116,96 +116,34 @@ export default function Quiz() {
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.3 }}
             >
-              {/* Step 1 - Age Selection with Purchase Triggers */}
+              {/* Step 1 - Financial Situation */}
               {currentStep === 1 && (
-                <div>
-                  <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white p-4 rounded-lg mb-4 text-center animate-pulse">
-                    <h2 className="text-lg font-semibold mb-1">🚨 ATENÇÃO: VAGAS LIMITADAS</h2>
-                    <p className="text-sm font-medium">
-                      Apenas 47 vagas restantes para o programa exclusivo!
-                    </p>
-                  </div>
-
-                  <div className="bg-gradient-to-r from-primary to-purple-600 text-white p-4 rounded-lg mb-6 text-center">
-                    <h2 className="text-lg font-semibold mb-2">🔥 DIAGNÓSTICO GRATUITO</h2>
-                    <p className="text-sm opacity-90">
-                      Descubra EXATAMENTE quanto dinheiro você está perdendo todo mês!
-                    </p>
-                    <div className="mt-2 text-xs bg-white bg-opacity-20 rounded px-2 py-1 inline-block">
-                      Valor: R$ 97,00 - HOJE GRÁTIS
-                    </div>
-                  </div>
-
-                  <QuizStep>
-                    <h2 className="text-xl font-semibold text-gray-800 mb-6 text-center">
-                      Selecione sua idade?
-                    </h2>
-                    <div className="space-y-3">
-                      {[
-                        { value: "18-24", label: "18 a 24 anos" },
-                        { value: "25-34", label: "25 a 34 anos" },
-                        { value: "35-44", label: "35 a 44 anos" },
-                        { value: "45+", label: "45+ anos" },
-                      ].map((option) => (
-                        <Button
-                          key={option.value}
-                          variant="outline"
-                          className="w-full p-4 h-auto text-left justify-start option-card hover:bg-green-50 hover:border-green-400"
-                          onClick={() => selectOption("age", option.value)}
-                        >
-                          {option.label}
-                        </Button>
-                      ))}
-                    </div>
-                  </QuizStep>
-
-                  <div className="mt-4 space-y-2">
-                    <div className="text-center text-sm text-gray-600">
-                      <p>
-                        ⚡ <span className="font-semibold text-primary">27.843 pessoas</span> já transformaram suas finanças!
-                      </p>
-                    </div>
-                    <div className="bg-yellow-100 border border-yellow-300 rounded p-3 text-center">
-                      <p className="text-sm text-yellow-800 font-medium">
-                        ⏰ Esta oportunidade expira em 24 horas
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Step 2 - Income Range */}
-              {currentStep === 2 && (
                 <QuizStep>
-                  <h2 className="text-xl font-semibold text-gray-800 mb-4 text-center">
-                    Qual sua faixa de renda mensal?
+                  <h2 className="text-lg md:text-xl font-semibold text-gray-800 mb-6 text-center leading-tight">
+                    Como você se sente em relação à sua situação financeira atual?
                   </h2>
-                  <p className="text-gray-600 text-center mb-6">
-                    Se não tem renda fixa, considere uma média.
-                  </p>
                   <div className="space-y-3">
                     {[
-                      { value: "até-3000", label: "Até R$ 3.000" },
-                      { value: "3000-5000", label: "De R$ 3.000 a R$ 5.000" },
-                      { value: "5000-8000", label: "De R$ 5.000 a R$ 8.000" },
-                      { value: "8000-12000", label: "De R$ 8.000 a R$ 12.000" },
-                      { value: "12000+", label: "Acima de R$ 12.000" },
+                      { value: "comfortable", icon: "😊", label: "Estou confortável" },
+                      { value: "organized", icon: "😐", label: "Gostaria de ser organizado com meu dinheiro" },
+                      { value: "struggling", icon: "😰", label: "Estou lutando com problemas financeiros" },
                     ].map((option) => (
                       <Button
                         key={option.value}
                         variant="outline"
-                        className="w-full p-4 h-auto text-left justify-start option-card"
-                        onClick={() => selectOption("income", option.value)}
+                        className="w-full p-4 h-auto text-left justify-start option-card hover:bg-blue-50 hover:border-blue-400"
+                        onClick={() => selectOption("situation", option.value)}
                       >
-                        {option.label}
+                        <span className="text-xl md:text-2xl mr-3">{option.icon}</span>
+                        <span className="text-sm md:text-base">{option.label}</span>
                       </Button>
                     ))}
                   </div>
                 </QuizStep>
               )}
 
-              {/* Step 3 - Income Sufficiency */}
-              {currentStep === 3 && (
+              {/* Step 2 - Income Sufficiency */}
+              {currentStep === 2 && (
                 <div>
                   <div className="bg-blue-100 border-l-4 border-blue-500 p-4 mb-6">
                     <p className="text-sm text-blue-800">
@@ -238,25 +176,29 @@ export default function Quiz() {
                 </div>
               )}
 
-              {/* Step 4 - Financial Situation */}
-              {currentStep === 4 && (
+              {/* Step 3 - Income Range */}
+              {currentStep === 3 && (
                 <QuizStep>
-                  <h2 className="text-xl font-semibold text-gray-800 mb-6 text-center">
-                    Como você se sente em relação à sua situação financeira atual?
+                  <h2 className="text-xl font-semibold text-gray-800 mb-4 text-center">
+                    Qual sua faixa de renda mensal?
                   </h2>
+                  <p className="text-gray-600 text-center mb-6">
+                    Se não tem renda fixa, considere uma média.
+                  </p>
                   <div className="space-y-3">
                     {[
-                      { value: "comfortable", icon: "😎", label: "Estou confortável" },
-                      { value: "organized", icon: "😟", label: "Gostaria de ser organizado com meu dinheiro" },
-                      { value: "struggling", icon: "😰", label: "Estou lutando com problemas financeiros" },
+                      { value: "até-3000", label: "Até R$ 3.000" },
+                      { value: "3000-5000", label: "De R$ 3.000 a R$ 5.000" },
+                      { value: "5000-8000", label: "De R$ 5.000 a R$ 8.000" },
+                      { value: "8000-12000", label: "De R$ 8.000 a R$ 12.000" },
+                      { value: "12000+", label: "Acima de R$ 12.000" },
                     ].map((option) => (
                       <Button
                         key={option.value}
                         variant="outline"
                         className="w-full p-4 h-auto text-left justify-start option-card"
-                        onClick={() => selectOption("situation", option.value)}
+                        onClick={() => selectOption("income", option.value)}
                       >
-                        <span className="text-2xl mr-3">{option.icon}</span>
                         {option.label}
                       </Button>
                     ))}
@@ -264,8 +206,8 @@ export default function Quiz() {
                 </QuizStep>
               )}
 
-              {/* Step 5 - Financial Disorganization Impact */}
-              {currentStep === 5 && (
+              {/* Step 4 - Financial Disorganization Impact */}
+              {currentStep === 4 && (
                 <QuizStep>
                   <h2 className="text-xl font-semibold text-gray-800 mb-6 text-center">
                     A desorganização financeira é uma barreira para viver a vida que você realmente deseja?
@@ -290,8 +232,8 @@ export default function Quiz() {
                 </QuizStep>
               )}
 
-              {/* Step 6 - Educational Content */}
-              {currentStep === 6 && (
+              {/* Step 5 - Educational Content */}
+              {currentStep === 5 && (
                 <QuizStep>
                   <div className="bg-red-100 border border-red-300 rounded-lg p-4 mb-4">
                     <h2 className="text-xl font-semibold text-red-800 mb-2 text-center">
@@ -351,8 +293,8 @@ export default function Quiz() {
                 </QuizStep>
               )}
 
-              {/* Step 7 - Monthly Savings */}
-              {currentStep === 7 && (
+              {/* Step 6 - Monthly Savings */}
+              {currentStep === 6 && (
                 <QuizStep>
                   <h2 className="text-xl font-semibold text-gray-800 mb-6 text-center">
                     Quanto você consegue guardar mensalmente?
@@ -379,8 +321,8 @@ export default function Quiz() {
                 </QuizStep>
               )}
 
-              {/* Step 8 - Expense Categories */}
-              {currentStep === 8 && (
+              {/* Step 7 - Expense Categories */}
+              {currentStep === 7 && (
                 <QuizStep>
                   <h2 className="text-xl font-semibold text-gray-800 mb-4 text-center">
                     Em quais áreas você tem mais gastos durante o mês?
@@ -417,8 +359,8 @@ export default function Quiz() {
                 </QuizStep>
               )}
 
-              {/* Step 9 - Benefits Presentation */}
-              {currentStep === 9 && (
+              {/* Step 8 - Benefits Presentation */}
+              {currentStep === 8 && (
                 <QuizStep>
                   <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white p-4 rounded-lg mb-4 text-center">
                     <h2 className="text-xl font-semibold mb-2">
@@ -485,13 +427,13 @@ export default function Quiz() {
                 </QuizStep>
               )}
 
-              {/* Step 10 - Loading Analysis */}
-              {currentStep === 10 && (
+              {/* Step 9 - Loading Analysis */}
+              {currentStep === 9 && (
                 <LoadingAnimation onComplete={nextStep} />
               )}
 
-              {/* Step 11 - Results with Chart */}
-              {currentStep === 11 && (
+              {/* Step 10 - Results with Chart */}
+              {currentStep === 10 && (
                 <QuizStep>
                   <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white p-3 rounded-lg mb-4 text-center">
                     <h2 className="text-lg font-bold mb-1">🚨 DIAGNÓSTICO CONCLUÍDO</h2>
@@ -551,8 +493,8 @@ export default function Quiz() {
                 </QuizStep>
               )}
 
-              {/* Step 12 - Sales Page Integration */}
-              {currentStep === 12 && (
+              {/* Step 11 - Sales Page Integration */}
+              {currentStep === 11 && (
                 <div className="w-full max-w-4xl mx-auto px-4">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
