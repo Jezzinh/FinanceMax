@@ -561,31 +561,33 @@ export default function Quiz() {
                     className="bg-white rounded-lg shadow-lg overflow-hidden"
                   >
                     {/* Hero Section */}
-                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 md:p-8 text-center">
-                      <h1 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 leading-tight">
+                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 md:p-8 text-center">
+                      <h1 className="text-xl md:text-4xl font-bold mb-4 md:mb-4 leading-tight px-2">
                         Transforme Sua Vida Financeira em 30 Dias
                       </h1>
-                      <p className="text-sm md:text-lg mb-4 md:mb-6 opacity-90 px-2">
+                      <p className="text-sm md:text-lg mb-6 md:mb-6 opacity-90 px-4 leading-relaxed">
                         A planilha financeira mais completa do Brasil. Mais de 20 ferramentas integradas para você organizar, controlar e multiplicar seu dinheiro.
                       </p>
                       
                       {/* Price Display */}
-                      <div className="bg-white bg-opacity-20 rounded-lg p-4 md:p-6 mb-4 md:mb-6">
-                        <div className="text-xs md:text-sm opacity-80 line-through mb-1 md:mb-2">De R$ 94,90</div>
-                        <div className="text-2xl md:text-4xl font-bold mb-1 md:mb-2">por apenas</div>
-                        <div className="text-3xl md:text-5xl font-bold text-yellow-300 mb-1 md:mb-2">4x de R$ 5,77</div>
-                        <div className="text-lg md:text-xl">ou R$ 19,90 à vista</div>
-                        <div className="text-xs md:text-sm mt-1 md:mt-2 opacity-80">Pagamento único. Sem mensalidades.</div>
+                      <div className="bg-white bg-opacity-20 rounded-lg p-4 md:p-6 mb-6 md:mb-6 mx-2">
+                        <div className="text-sm opacity-80 line-through mb-2">De R$ 94,90</div>
+                        <div className="text-xl md:text-4xl font-bold mb-2">por apenas</div>
+                        <div className="text-2xl md:text-5xl font-bold text-yellow-300 mb-2 leading-tight">4x de R$ 5,77</div>
+                        <div className="text-base md:text-xl mb-1">ou R$ 19,90 à vista</div>
+                        <div className="text-xs md:text-sm opacity-80">Pagamento único. Sem mensalidades.</div>
                       </div>
 
-                      <Button 
-                        onClick={redirectToCheckout}
-                        className="w-full md:w-auto bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 md:py-4 px-4 md:px-8 text-lg md:text-xl rounded-full animate-pulse mb-4"
-                      >
-                        🚀 QUERO O FINANCEMAX COM DESCONTO
-                      </Button>
+                      <div className="px-4 mb-4">
+                        <Button 
+                          onClick={redirectToCheckout}
+                          className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-2 text-sm md:text-lg rounded-full animate-pulse shadow-lg"
+                        >
+                          🚀 QUERO O FINANCEMAX
+                        </Button>
+                      </div>
                       
-                      <div className="flex flex-col md:flex-row items-center justify-center mt-3 md:mt-4 space-y-2 md:space-y-0 md:space-x-4 text-xs md:text-sm">
+                      <div className="flex flex-col md:flex-row items-center justify-center space-y-1 md:space-y-0 md:space-x-4 text-xs md:text-sm opacity-90">
                         <span>✅ 7 dias de garantia</span>
                         <span>✅ Pagamento seguro</span>
                         <span>✅ +10.000 usuários</span>
@@ -665,12 +667,12 @@ export default function Quiz() {
                           ))}
                         </div>
 
-                        <div className="text-center mt-6 md:mt-8">
+                        <div className="text-center mt-6 md:mt-8 px-4">
                           <Button 
                             onClick={redirectToCheckout}
-                            className="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 md:px-8 text-base md:text-lg rounded-full"
+                            className="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-2 md:px-8 text-xs md:text-lg rounded-full"
                           >
-                            Transformar Minha Vida Financeira Agora
+                            Transformar Minha Vida Financeira
                           </Button>
                         </div>
                       </div>
@@ -744,35 +746,37 @@ export default function Quiz() {
                       </div>
 
                       {/* Final CTA */}
-                      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-4 md:p-8 rounded-lg text-center">
-                        <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
+                      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-6 md:p-8 rounded-lg text-center">
+                        <h2 className="text-lg md:text-2xl font-bold mb-4 md:mb-4 px-2 leading-tight">
                           Pronto para Transformar Sua Vida Financeira?
                         </h2>
-                        <p className="mb-4 md:mb-6 opacity-90 text-sm md:text-base px-2">
+                        <p className="mb-6 md:mb-6 opacity-90 text-sm md:text-base px-4 leading-relaxed">
                           Junte-se a mais de 10.000 pessoas que já organizaram suas finanças com o FinanceMax Pro
                         </p>
                         
-                        <div className="bg-white bg-opacity-20 rounded-lg p-4 md:p-6 mb-4 md:mb-6 inline-block">
-                          <div className="text-xs md:text-sm opacity-80 line-through mb-1">De R$ 94,90</div>
-                          <div className="text-2xl md:text-3xl font-bold mb-1">4x de R$ 5,77</div>
+                        <div className="bg-white bg-opacity-20 rounded-lg p-4 md:p-6 mb-6 md:mb-6 inline-block mx-2">
+                          <div className="text-sm opacity-80 line-through mb-1">De R$ 94,90</div>
+                          <div className="text-xl md:text-3xl font-bold mb-1 leading-tight">4x de R$ 5,77</div>
                           <div className="text-base md:text-lg">ou R$ 19,90 à vista</div>
                         </div>
 
-                        <div className="space-y-3 md:space-y-4">
-                          <Button 
-                            onClick={redirectToCheckout}
-                            className="w-full bg-white text-orange-600 hover:bg-gray-100 font-bold py-3 md:py-4 px-4 md:px-8 text-lg md:text-xl rounded-full"
-                          >
-                            🚀 RECEBER AGORA
-                          </Button>
+                        <div className="space-y-4 md:space-y-4">
+                          <div className="px-4">
+                            <Button 
+                              onClick={redirectToCheckout}
+                              className="w-full bg-white text-orange-600 hover:bg-gray-100 font-bold py-4 px-4 text-lg md:text-xl rounded-full shadow-lg"
+                            >
+                              🚀 RECEBER AGORA
+                            </Button>
+                          </div>
                           
-                          <div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-6 text-xs md:text-sm">
+                          <div className="flex flex-col md:flex-row items-center justify-center space-y-1 md:space-y-0 md:space-x-6 text-xs md:text-sm opacity-90">
                             <span>✅ Garantia de 7 dias</span>
                             <span>✅ Pagamento 100% seguro</span>
                             <span>✅ Acesso imediato</span>
                           </div>
                           
-                          <div className="flex items-center justify-center space-x-3 md:space-x-4 text-xs md:text-sm opacity-80">
+                          <div className="flex items-center justify-center space-x-4 md:space-x-4 text-xs md:text-sm opacity-80">
                             <span>💳 Visa</span>
                             <span>💳 Mastercard</span>
                             <span>📱 PIX</span>
