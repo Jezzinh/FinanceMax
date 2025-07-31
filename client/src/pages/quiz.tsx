@@ -409,7 +409,6 @@ export default function Quiz() {
                         </div>
                         <div className="flex flex-col items-end ml-2 flex-shrink-0">
                           <span className="text-green-600 font-bold text-xs md:text-sm">{benefit.savings}</span>
-                          <span className="text-green-500 text-xs">{benefit.value}</span>
                         </div>
                       </div>
                     ))}
