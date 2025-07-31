@@ -392,22 +392,25 @@ export default function Quiz() {
 
                   <div className="space-y-3 mb-6">
                     {[
-                      { text: "Controle total das suas finanças", savings: "Economia" },
-                      { text: "Dinheiro sobrando até fim do mês", savings: "Sobra" },
-                      { text: "Controle dos gastos com cartões", savings: "Controle" },
-                      { text: "Junte dinheiro e realize sonhos", savings: "Sonhos" },
-                      { text: "Tranquilidade e saúde financeira", savings: "Sem preço" },
+                      { text: "Controle total das suas finanças", savings: "R$ 500+", value: "Economia" },
+                      { text: "Dinheiro sobrando até fim do mês", savings: "R$ 300+", value: "Sobra" },
+                      { text: "Controle dos gastos com cartões", savings: "R$ 200+", value: "Controle" },
+                      { text: "Junte dinheiro e realize sonhos", savings: "R$ 1000+", value: "Sonhos" },
+                      { text: "Tranquilidade e saúde financeira", savings: "Sem preço", value: "Sem preço" },
                     ].map((benefit, index) => (
-                      <div key={index} className="flex items-center justify-between bg-green-50 p-3 rounded-lg">
-                        <div className="flex items-center">
-                          <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                      <div key={index} className="flex items-start justify-between bg-green-50 p-3 rounded-lg">
+                        <div className="flex items-start flex-1">
+                          <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
                             <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                             </svg>
                           </div>
-                          <span className="text-gray-700 font-medium">{benefit.text}</span>
+                          <span className="text-gray-700 font-medium text-sm md:text-base leading-snug">{benefit.text}</span>
                         </div>
-                        <span className="text-green-600 font-bold text-sm">{benefit.savings}</span>
+                        <div className="flex flex-col items-end ml-2 flex-shrink-0">
+                          <span className="text-green-600 font-bold text-xs md:text-sm">{benefit.savings}</span>
+                          <span className="text-green-500 text-xs">{benefit.value}</span>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -420,7 +423,7 @@ export default function Quiz() {
 
                   <Button 
                     onClick={nextStep}
-                    className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-4 text-lg animate-pulse"
+                    className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-4 px-4 text-sm md:text-lg animate-pulse whitespace-normal break-words leading-tight"
                   >
                     VER MEU DIAGNÓSTICO COMPLETO →
                   </Button>
