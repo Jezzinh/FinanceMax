@@ -666,7 +666,11 @@ export default function Quiz() {
                         </h2>
                         <div className="max-w-3xl mx-auto">
                           <div className="flex flex-col md:flex-row items-center justify-center mb-4">
-                            <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-300 rounded-full mb-2 md:mb-0 md:mr-4"></div>
+                            <img 
+                              src="/attached_assets/image_1753922014730.png" 
+                              alt="Vargas - Especialista em Finanças" 
+                              className="w-12 h-12 md:w-16 md:h-16 rounded-full mb-2 md:mb-0 md:mr-4 object-cover"
+                            />
                             <div className="text-center md:text-left">
                               <h4 className="font-semibold text-gray-800 text-sm md:text-base">Vargas</h4>
                               <p className="text-gray-600 text-xs md:text-sm">Especialista em Finanças</p>
