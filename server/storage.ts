@@ -1,4 +1,4 @@
-import { type QuizResponse, type InsertQuizResponse } from "@shared/schema";
+import { type QuizResponse, type InsertQuizResponse } from "../shared/schema.js";
 import { randomUUID } from "crypto";
 
 export interface IStorage {
@@ -15,7 +15,11 @@ export class MemStorage implements IStorage {
 
   async createQuizResponse(insertResponse: InsertQuizResponse): Promise<QuizResponse> {
     const id = randomUUID();
-    const response: QuizResponse = { ...insertResponse, id };
+    const response: QuizResponse = { 
+      ...insertResponse, 
+      id,
+      expenses: insertResponse.expenses as string[]
+    };
     this.quizResponses.set(id, response);
     return response;
   }
