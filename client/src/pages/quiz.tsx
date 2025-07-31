@@ -666,11 +666,27 @@ export default function Quiz() {
                         </h2>
                         <div className="max-w-3xl mx-auto">
                           <div className="flex flex-col md:flex-row items-center justify-center mb-4">
-                            <img 
-                              src="/attached_assets/image_1753922014730.png" 
-                              alt="Vargas - Especialista em Finanças" 
-                              className="w-12 h-12 md:w-16 md:h-16 rounded-full mb-2 md:mb-0 md:mr-4 object-cover"
-                            />
+                            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full mb-2 md:mb-0 md:mr-4 overflow-hidden bg-gradient-to-br from-blue-500 to-blue-700">
+                              <svg viewBox="0 0 100 100" className="w-full h-full">
+                                {/* Face */}
+                                <circle cx="50" cy="35" r="18" fill="#fdbcb4"/>
+                                {/* Hair */}
+                                <path d="M32 25 Q50 15 68 25 Q68 35 50 30 Q32 35 32 25" fill="#4a4a4a"/>
+                                {/* Eyes */}
+                                <circle cx="44" cy="32" r="2" fill="#333"/>
+                                <circle cx="56" cy="32" r="2" fill="#333"/>
+                                {/* Nose */}
+                                <circle cx="50" cy="38" r="1" fill="#f4a99c"/>
+                                {/* Mouth */}
+                                <path d="M46 42 Q50 45 54 42" stroke="#333" strokeWidth="1" fill="none"/>
+                                {/* Shirt/Professional attire */}
+                                <rect x="35" y="55" width="30" height="45" fill="#1e40af"/>
+                                {/* Collar */}
+                                <polygon points="42,55 50,65 58,55" fill="white"/>
+                                {/* Tie */}
+                                <polygon points="48,65 50,75 52,65" fill="#dc2626"/>
+                              </svg>
+                            </div>
                             <div className="text-center md:text-left">
                               <h4 className="font-semibold text-gray-800 text-sm md:text-base">Vargas</h4>
                               <p className="text-gray-600 text-xs md:text-sm">Especialista em Finanças</p>
