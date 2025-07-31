@@ -666,26 +666,15 @@ export default function Quiz() {
                         </h2>
                         <div className="max-w-3xl mx-auto">
                           <div className="flex flex-col md:flex-row items-center justify-center mb-4">
-                            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full mb-2 md:mb-0 md:mr-4 overflow-hidden bg-gradient-to-br from-blue-500 to-blue-700">
-                              <svg viewBox="0 0 100 100" className="w-full h-full">
-                                {/* Face */}
-                                <circle cx="50" cy="35" r="18" fill="#fdbcb4"/>
-                                {/* Hair */}
-                                <path d="M32 25 Q50 15 68 25 Q68 35 50 30 Q32 35 32 25" fill="#4a4a4a"/>
-                                {/* Eyes */}
-                                <circle cx="44" cy="32" r="2" fill="#333"/>
-                                <circle cx="56" cy="32" r="2" fill="#333"/>
-                                {/* Nose */}
-                                <circle cx="50" cy="38" r="1" fill="#f4a99c"/>
-                                {/* Mouth */}
-                                <path d="M46 42 Q50 45 54 42" stroke="#333" strokeWidth="1" fill="none"/>
-                                {/* Shirt/Professional attire */}
-                                <rect x="35" y="55" width="30" height="45" fill="#1e40af"/>
-                                {/* Collar */}
-                                <polygon points="42,55 50,65 58,55" fill="white"/>
-                                {/* Tie */}
-                                <polygon points="48,65 50,75 52,65" fill="#dc2626"/>
-                              </svg>
+                            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full mb-2 md:mb-0 md:mr-4 overflow-hidden bg-gradient-to-b from-blue-100 to-blue-200 flex items-center justify-center">
+                              <div className="w-full h-full bg-gradient-to-b from-amber-100 to-amber-200 rounded-full flex items-center justify-center relative">
+                                {/* Professional person silhouette */}
+                                <svg viewBox="0 0 24 24" className="w-8 h-8 md:w-10 md:h-10 text-gray-600">
+                                  <path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                                {/* Subtle overlay for professional look */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-gray-500/10 rounded-full"></div>
+                              </div>
                             </div>
                             <div className="text-center md:text-left">
                               <h4 className="font-semibold text-gray-800 text-sm md:text-base">Vargas</h4>
