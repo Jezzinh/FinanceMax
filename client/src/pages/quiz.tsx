@@ -559,11 +559,7 @@ export default function Quiz() {
                             description: "Construa sua reserva de emergência, para ter segurança e tranquilidade. Além da reserva você também poderá controlar os seus investimentos de renda fixa e variável.",
                             icon: "📈"
                           },
-                          {
-                            title: "Rastreador de Dívidas",
-                            description: "Esse rastreador fará a contabilização automática de todas as sua dívidas e você terá um acompanhamento por status.",
-                            icon: "💳"
-                          },
+
                           {
                             title: "Balanço Financeiro",
                             description: "Acompanhe mês a mês e no ano, todas as suas entradas e saídas e saiba qual foi o saldo final de cada mês, todos os cálculos automáticos.",
@@ -638,7 +634,7 @@ export default function Quiz() {
                             "Formulário de crédito automatizado",
                             "Ferramenta de importação de fatura",
                             "Torre de investimentos",
-                            "Rastreador de dívidas",
+
                             "Calendário de compromissos",
                             "Dashboard com visão geral",
                             "Balanço financeiro",
