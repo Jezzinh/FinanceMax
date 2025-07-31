@@ -666,11 +666,44 @@ export default function Quiz() {
                         </h2>
                         <div className="max-w-3xl mx-auto">
                           <div className="flex flex-col md:flex-row items-center justify-center mb-4">
-                            <img 
-                              src="/attached_assets/image_1753922243652.png" 
-                              alt="Vargas - Especialista em Finanças" 
-                              className="w-12 h-12 md:w-16 md:h-16 rounded-full mb-2 md:mb-0 md:mr-4 object-cover"
-                            />
+                            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full mb-2 md:mb-0 md:mr-4 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+                              <svg viewBox="0 0 100 100" className="w-full h-full">
+                                {/* Background */}
+                                <rect width="100" height="100" fill="#f3f4f6"/>
+                                
+                                {/* Face/Head */}
+                                <circle cx="50" cy="42" r="22" fill="#fdbcb4"/>
+                                
+                                {/* Beard area */}
+                                <ellipse cx="50" cy="52" rx="12" ry="8" fill="#8b7355"/>
+                                
+                                {/* Mustache */}
+                                <ellipse cx="50" cy="46" rx="6" ry="2" fill="#8b7355"/>
+                                
+                                {/* Eyes */}
+                                <circle cx="44" cy="38" r="2" fill="#333"/>
+                                <circle cx="56" cy="38" r="2" fill="#333"/>
+                                
+                                {/* Eyebrows */}
+                                <rect x="42" y="35" width="6" height="1" rx="0.5" fill="#8b7355"/>
+                                <rect x="52" y="35" width="6" height="1" rx="0.5" fill="#8b7355"/>
+                                
+                                {/* Nose */}
+                                <ellipse cx="50" cy="42" rx="1.5" ry="2" fill="#f4a99c"/>
+                                
+                                {/* Mouth (subtle) */}
+                                <ellipse cx="50" cy="48" rx="2" ry="0.5" fill="#d97706"/>
+                                
+                                {/* Shirt (green) */}
+                                <rect x="30" y="64" width="40" height="36" fill="#059669"/>
+                                
+                                {/* Shirt collar */}
+                                <polygon points="44,64 50,72 56,64" fill="#065f46"/>
+                                
+                                {/* Head shadow for depth */}
+                                <ellipse cx="52" cy="45" rx="20" ry="18" fill="#000" opacity="0.05"/>
+                              </svg>
+                            </div>
                             <div className="text-center md:text-left">
                               <h4 className="font-semibold text-gray-800 text-sm md:text-base">Vargas</h4>
                               <p className="text-gray-600 text-xs md:text-sm">Especialista em Finanças</p>
