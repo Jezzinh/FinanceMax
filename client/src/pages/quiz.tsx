@@ -666,16 +666,11 @@ export default function Quiz() {
                         </h2>
                         <div className="max-w-3xl mx-auto">
                           <div className="flex flex-col md:flex-row items-center justify-center mb-4">
-                            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full mb-2 md:mb-0 md:mr-4 overflow-hidden bg-gradient-to-b from-blue-100 to-blue-200 flex items-center justify-center">
-                              <div className="w-full h-full bg-gradient-to-b from-amber-100 to-amber-200 rounded-full flex items-center justify-center relative">
-                                {/* Professional person silhouette */}
-                                <svg viewBox="0 0 24 24" className="w-8 h-8 md:w-10 md:h-10 text-gray-600">
-                                  <path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                                </svg>
-                                {/* Subtle overlay for professional look */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-gray-500/10 rounded-full"></div>
-                              </div>
-                            </div>
+                            <img 
+                              src="/attached_assets/image_1753922243652.png" 
+                              alt="Vargas - Especialista em Finanças" 
+                              className="w-12 h-12 md:w-16 md:h-16 rounded-full mb-2 md:mb-0 md:mr-4 object-cover"
+                            />
                             <div className="text-center md:text-left">
                               <h4 className="font-semibold text-gray-800 text-sm md:text-base">Vargas</h4>
                               <p className="text-gray-600 text-xs md:text-sm">Especialista em Finanças</p>
