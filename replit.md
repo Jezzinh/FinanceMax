@@ -10,6 +10,13 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### Debug and Fix Application Issues (July 31, 2025)
+- **Fixed Server Startup:** Corrected import paths from `@shared/schema` to relative paths
+- **Updated PostCSS Config:** Changed from CommonJS to ES module syntax for compatibility
+- **Fixed TypeScript Configuration:** Updated path resolution for client-side imports
+- **Resolved Schema Type Issues:** Fixed database schema type conflicts in storage layer
+- **UI Button Styling:** Changed "QUERO DESCOBRIR QUANTO POSSO ECONOMIZAR" button to always show blue background
+
 ### Complete Vercel-Compatible Refactor (July 31, 2025)
 - **COMPLETE REWRITE:** Migrated entire application from Express.js + Vite to Next.js 15
 - **Vercel Optimization:** Built specifically for Vercel deployment with zero configuration

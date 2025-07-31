@@ -285,7 +285,7 @@ export default function Quiz() {
                     
                     <Button 
                       onClick={nextStep}
-                      className="w-full bg-primary hover:bg-blue-600 text-white font-semibold py-3 px-4 whitespace-normal break-words text-sm md:text-base leading-tight"
+                      className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 whitespace-normal break-words text-sm md:text-base leading-tight"
                     >
                       QUERO DESCOBRIR QUANTO POSSO ECONOMIZAR
                     </Button>
