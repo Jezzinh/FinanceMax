@@ -1,6 +1,11 @@
-node_modules
-dist
+node_modules/
+dist/
+public/
+.env
+.env.local
+.env.production.local
+.env.development.local
+*.log
 .DS_Store
-server/public
-vite.config.ts.*
-*.tar.gz
+.vscode/
+.idea/

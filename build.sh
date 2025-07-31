@@ -1,9 +1,5 @@
 #!/bin/bash
-
-# Install dependencies
+echo "Building application for Vercel..."
 npm install
-
-# Build the frontend
 npm run build
-
-# Build is complete
+echo "Build complete! Ready for Vercel deploy."
